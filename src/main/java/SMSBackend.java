@@ -22,7 +22,7 @@ public class SMSBackend {
         Spark.port(port);
 
 
-        get("/", (req, res) -> "Hello, Mukti Gupta.");
+        get("/", (req, res) -> "Hello, Mukti Gupta. How are you.");
 
         TwilioRestClient client = new TwilioRestClient.Builder(System.getenv("TWILIO_ACCOUNT_SID"), System.getenv("TWILIO_AUTH_TOKEN")).build();
 
