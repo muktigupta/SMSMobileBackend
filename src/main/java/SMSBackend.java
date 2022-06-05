@@ -26,7 +26,7 @@ public class SMSBackend {
 
         TwilioRestClient client = new TwilioRestClient.Builder(System.getenv("TWILIO_ACCOUNT_SID"), System.getenv("TWILIO_AUTH_TOKEN")).build();
 
-        post("/sms", (req, res) -> {
+        post("/com.mukti.sms", (req, res) -> {
             String body = req.queryParams("Body");
             String to = req.queryParams("To");
             String from = System.getenv("TWILIO_NUMBER");
